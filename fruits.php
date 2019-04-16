@@ -52,6 +52,9 @@
 
     <ul class="liste-fruits">
         <?php 
+
+            // pour chacun des fruit dans la liste des fruits existants,
+            // on affiche un lien vers fruits.php en faisant varier la valeur du paramètre d'url "fruit"
             foreach($fruitsExistants as $fruitExistant) {
                 echo '<li><a href="fruits.php?fruit=' . $fruitExistant . '">Mangez des ' . $fruitExistant . 's' . ' !</a></li>';
             }
