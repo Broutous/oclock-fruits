@@ -6,21 +6,21 @@
     // Attention : la clé est une chaîne ('entre quotes')
     $fruit = $_GET['fruit'];
 
-    // on créé le tableau des fruits
+    // on crée le tableau des fruits
     $fruitsExistants = [
         'banane',
         'pomme',
-        'poire',
         'fraise',
+        'poire',
         'pêche'
     ];
 
-    // on créé le tableau associatif qui donne la couleur en hexadécimal pour chaque fruit.
+    // on crée le tableau associatif qui donne la couleur en hexadécimal pour chaque fruit.
     $couleursFruits = [
         'banane' => '#e7ea3f',
         'pomme' => '#c4e86a',
-        'poire' => '#e7ea3f',
         'fraise' => '#d63931',
+        'poire' => '#e7ea3f',
         'pêche' => '#f9a227'
     ];
 
