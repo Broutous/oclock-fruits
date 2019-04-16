@@ -1,9 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto');
 
 html,
 body {
     background: #000;
-    font-family: 'Lobster', 'Arial'
+    font-family: 'Roboto', 'Arial';
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Lobster', 'Arial';
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    padding-right: 15px;
 }
 
 img {

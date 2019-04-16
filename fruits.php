@@ -46,20 +46,25 @@
     <!-- On ajoute la couleur dans l'attribut style de la balise <h1> et on ajoute le "s" pour mettre le fruit au pluriel -->
     <h1 style="color: <?php echo $couleursFruits[$fruit] ?>">Mangez des <?php echo $fruit . 's'; ?> !</h1>
 
-    <!-- On va chercher l'image qui porte le nom du fruit passé en paramètre d'url en préfixant avec le répertoire /img et 
-         en suffixant avec l'extension .jpg -->
-    <img src="img/<?php echo $fruit; ?>.jpg" alt="<?php echo $fruit; ?>" />
-
     <ul class="liste-fruits">
         <?php 
-
-            // pour chacun des fruit dans la liste des fruits existants,
+            // pour chacun des fruits dans la liste des fruits existants ($fruitsExistants),
             // on affiche un lien vers fruits.php en faisant varier la valeur du paramètre d'url "fruit"
             // et la couleur du lien en fonction du fruit (c'est beau !)
             foreach($fruitsExistants as $fruitExistant) {
-                echo '<li><a style="color: ' . $couleursFruits[$fruitExistant] . '" href="fruits.php?fruit=' . $fruitExistant . '">Mangez des ' . $fruitExistant . 's' . ' !</a></li>';
+                // si le fruit dans cette itération est le même que celui demandé en paramètre d'url,
+                // on n'affiche pas de lien, car on est déjà sur la page !
+                if ($fruit === $fruitExistant) {
+                    echo '<li>Mangez des ' .$fruitExistant .'s !</li>';
+                } else {
+                    echo '<li><a style="color: ' . $couleursFruits[$fruitExistant] . '" href="fruits.php?fruit=' . $fruitExistant . '">Mangez des ' . $fruitExistant . 's' . ' !</a></li>';
+                }
             }
         ?>
     </ul>
+
+    <!-- On va chercher l'image qui porte le nom du fruit passé en paramètre d'url en préfixant avec le répertoire /img et 
+         en suffixant avec l'extension .jpg -->
+    <img src="img/<?php echo $fruit; ?>.jpg" alt="<?php echo $fruit; ?>" />
 </body>
 </html>
