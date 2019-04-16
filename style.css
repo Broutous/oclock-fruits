@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html,
+body {
+    background: #000;
+    font-family: 'Lobster', 'Arial'
+}
+
+img {
+    width: 300px;
+}
