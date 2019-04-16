@@ -38,7 +38,7 @@
    <meta charset='utf-8'>
    <!-- Un super titre pour être original -->
    <title>Fruits.com, Mangez des fruits !</title>
-   
+
    <!-- Un peu de style pour être poli -->
    <link rel="stylesheet" href="style.css" />
 </head>
@@ -49,5 +49,13 @@
     <!-- On va chercher l'image qui porte le nom du fruit passé en paramètre d'url en préfixant avec le répertoire /img et 
          en suffixant avec l'extension .jpg -->
     <img src="img/<?php echo $fruit; ?>.jpg" alt="<?php echo $fruit; ?>" />
+
+    <ul class="liste-fruits">
+        <?php 
+            foreach($fruitsExistants as $fruitExistant) {
+                echo '<li><a href="fruits.php?fruit=' . $fruitExistant . '">Mangez des ' . $fruitExistant . 's' . ' !</a></li>';
+            }
+        ?>
+    </ul>
 </body>
 </html>
