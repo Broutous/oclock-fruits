@@ -55,8 +55,9 @@
 
             // pour chacun des fruit dans la liste des fruits existants,
             // on affiche un lien vers fruits.php en faisant varier la valeur du paramètre d'url "fruit"
+            // et la couleur du lien en fonction du fruit (c'est beau !)
             foreach($fruitsExistants as $fruitExistant) {
-                echo '<li><a href="fruits.php?fruit=' . $fruitExistant . '">Mangez des ' . $fruitExistant . 's' . ' !</a></li>';
+                echo '<li><a style="color: ' . $couleursFruits[$fruitExistant] . '" href="fruits.php?fruit=' . $fruitExistant . '">Mangez des ' . $fruitExistant . 's' . ' !</a></li>';
             }
         ?>
     </ul>
